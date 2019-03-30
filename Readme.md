@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Egor Vydrin](https://up.htmlacademy.ru/adaptive/16/user/209224).
-* Наставник: [Андрей Островский] (https://up.htmlacademy.ru/adaptive/16/user/198062).
+* Наставник: [Андрей Островский](https://up.htmlacademy.ru/adaptive/16/user/198062).
 
 ---
 
