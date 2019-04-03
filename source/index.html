@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 
 <body>
@@ -16,15 +15,17 @@
     <button class="navigation-toggle" type="button">Открыть меню</button>
     <nav class="navigation">
       <ul class="navigation__list site-list">
-        <li class="navigation__item"><a href="catalog.html">Каталог товаров</a></li>
-        <li class="navigation__item"><a href="#">Вязание на заказ</a></li>
+        <li class="navigation__item"><a class="navigation__link navigation__link--active" href="catalog.html">Каталог
+            товаров</a></li>
+        <li class="navigation__item"><a class="navigation__link" href="#">Вязание на заказ</a></li>
         <li class="navigation__item">
           <form method="GET" action="https://echo.htmlacademy.ru">
             <p><label for="search" aria-label="Поле поиска"></label>
               <input class="navigation__item-field-search" type="search" id="search" placeholder="Поиск по сайту"></p>
           </form>
         </li>
-        <li class="navigation__item"><a class="navigation__item-cart" href="#">Корзина: пока пуста</a></li>
+        <li class="navigation__item"><a class="navigation__link navigation__link-cart" href="#">Корзина: пока пуста</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -82,30 +83,33 @@
 
     <section class="reviews">
       <h2 class="reviews__title">Отзывы</h2>
-      <div class="reviews-list">
-        <blockquote class="reviews-item">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
+      <div class="reviews__list">
+        <blockquote class="reviews__item">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
           лайков,
           как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
           и мои фотографии сразу стали более стильными, а также набирают больше лайков!
         </blockquote>
-        <cite class="reviews-author">Анастасия Красильникова <p class="reviews-author--mail">@misssssiskras</p></cite>
+        <cite class="reviews__author">Анастасия Красильникова</cite>
+        <cite class="reviews__author-mail">@misssssiskras</cite>
       </div>
-      <button class="reviews__previous" type="button">Предыдущий отзыв</button>
-      <button class="review__next" type="button">Следующий отзыв</button>
+      <div class="reviews-slider slider">
+        <button class="reviews__control reviews__control-previous" type="button">Предыдущий отзыв</button>
+        <button class="reviews__control reviews__control-next" type="button">Следующий отзыв</button>
+      </div>
       <a href="#" class="reviews__write button ">Написать</a>
     </section>
 
     <section class="contacts">
       <h2 class="contacts__title">Контакты</h2>
-      <address>
-        <p>e-mail:</p>
-        <a class="contacts__e-mail" href="info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-        <p>адрес:</p>
-        <p>г. Санкт-Петербург,
+      <address class="contacts__address">
+        <p class="contacts__address__text">e-mail:</p>
+        <a class="contacts__address__text contacts__address__e-mail" href="info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+        <p class="contacts__address__text">адрес:</p>
+        <p class="contacts__address__text">г. Санкт-Петербург,
           ул. Большая Конюшенная,
           д. 19/8, офис 101</p>
       </address>
-      <a href="#"><img src="#" width="322" height="457"
+      <a href="https://goo.gl/maps/VHf1BKtxDVL2"><img src="#" width="322" height="457"
           alt="Местоположение нашего офиса г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101"></a>
       <a href="#" class="contacts__feedback button">Напишите нам</a>
     </section>
@@ -127,18 +131,18 @@
       </ul>
     </div>
     <div class="page-footer_copyright copyright">
-      <p class="copyright_text">Разработано</p><a class="copyright-icon"
-        href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <p class="copyright_text">Разработано
+        <a class="copyright-icon" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></p>
     </div>
   </footer>
 
   <section class="popup popup-to-cart visually-hidden">
     <h2 class="popup-to-cart__title">Добавить в корзину</h2>
-    <p>Выберите размер:</p>
-    <div class="size-list">
-      <button class="size-item" type="button">S</button>
-      <button class="size-item" type="button">M</button>
-      <button class="size-item" type="button">L</button>
+    <p class="popup-to-cart">Выберите размер:</p>
+    <div class="size__list">
+      <button class="size__item size__item--active" type="button">S</button>
+      <button class="size__item" type="button">M</button>
+      <button class="size__item" type="button">L</button>
     </div>
     <button class="to-cart__add button" type="submit">Добавить</button>
   </section>
