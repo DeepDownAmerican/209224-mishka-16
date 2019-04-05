@@ -9,85 +9,112 @@
 
 <body>
   <header class="page-header">
-    <a class="page-header__logo">
-      <img class="header__logo-image" src="#" width="86" height="35" alt="логотип сайта мишка">
+    <a class="page-header__logo" href="index.html">
+      <img class="page-header__logo-image" src="#" width="86" height="35" alt="логотип сайта мишка">
     </a>
-    <button class="navigation-toggle" type="button">Открыть меню</button>
     <nav class="navigation">
+      <button class="navigation-toggle" type="button">Открыть меню</button>
       <ul class="navigation__list site-list">
-        <li class="navigation__item"><a class="navigation__link navigation__link--active" href="catalog.html">Каталог
-            товаров</a></li>
-        <li class="navigation__item"><a class="navigation__link" href="#">Вязание на заказ</a></li>
         <li class="navigation__item">
-          <form method="GET" action="https://echo.htmlacademy.ru">
-            <p><label for="search" aria-label="Поле поиска"></label>
-              <input class="navigation__item-field-search" type="search" id="search" placeholder="Поиск по сайту"></p>
-          </form>
+          <a class="navigation__link navigation__link--active" href="catalog.html">Каталог товаров</a>
         </li>
-        <li class="navigation__item"><a class="navigation__link navigation__link-cart" href="#">Корзина: пока пуста</a>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Вязание на заказ</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link navigation_search navigation_search--header" href="#">Поиск по сайту</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link navigation__link-cart" href="#">Корзина: пока пуста</a>
         </li>
       </ul>
     </nav>
   </header>
 
   <main class="page-main">
-    <h1 class="catalog__title">Каталог товаров</h1>
     <section class="catalog">
+      <h1 class="catalog__title">Каталог товаров</h1>
       <h2 class="visually-hidden">Список товров</h2>
       <ul class="catalog__list">
         <li class="catalog__item">
-          <img class="catalog__item-image" src="#" width="260" height="195" alt="заяц">
-          <h3 class="catalog__item-title">Зайчик-попрыгайчик</h3>
+          <a href="#">
+            <img class="catalog__item-image" src="#" width="260" height="195" alt="заяц">
+          </a>
+          <a href="">
+            <h3 class="catalog__item-title">Зайчик-попрыгайчик</h3>
+          </a>
           <p class="catalog__item-info">Рост 30 см, вес 200 г</p>
           <p class="catalog__item-price">1 200 руб.</p>
-          <button class="catalog__item-buy" type="button">Купить</button>
+          <button class="catalog__item-buy js-catalog__item-buy--show" type="button">Купить</button>
         </li>
         <li class="catalog__item">
-          <img class="catalog__item-image" src="#" width="260" height="195" alt="корзина для белья">
-          <h3 class="catalog__item-title">Корзинка для белья</h3>
+          <a href="#">
+            <img class="catalog__item-image" src="#" width="260" height="195" alt="корзина для белья">
+          </a>
+          <a href="#">
+            <h3 class="catalog__item-title">Корзинка для белья</h3>
+          </a>
           <p class="catalog__item-info">Диаметр 15 см, высота 10 см</p>
           <p class="catalog__item-price">690 руб.</p>
-          <button class="catalog__item-buy" type="button">Купить</button>
+          <button class="catalog__item-buy js-catalog__item-buy--show" type="button">Купить</button>
         </li>
         <li class="catalog__item">
-          <img class="catalog__item-image" src="#" width="260" height="195" alt="корзина для игрушек">
-          <h3 class="catalog__item-title">Большая корзинка для игрушек</h3>
+          <a href="#">
+            <img class="catalog__item-image" src="#" width="260" height="195" alt="корзина для игрушек">
+          </a>
+          <a href="#">
+            <h3 class="catalog__item-title">Большая корзинка для игрушек</h3>
+          </a>
           <p class="catalog__item-info">Диаметр 30 см, высота 30 см</p>
           <p class="catalog__item-price">1 500 руб.</p>
-          <button class="catalog__item-buy" type="button">Купить</button>
+          <button class="catalog__item-buy js-catalog__item-buy--show" type="button">Купить</button>
         </li>
       </ul>
     </section>
 
     <section class="production">
       <h2 class="production__title">Процесс производства</h2>
-      <img class="production__video" src="#" width="260" height="150" alt="воспроизвести видео">
-      <p class="production__info">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
-        появляются наши товары.</p>
-      <a class="production-order button" href="form.html">Cделать заказ</a>
+      <video class="production__video" width="260" height="150" controls="controls" poster="#">
+        <source src="#">
+      </video>
+      <img  src="#" width="260" height="150" alt="воспроизвести видео">
+      <p class="production__info">
+        По просьбам наших любимых фолловеров мы
+        сняли для вас подробное видео о том, как
+        появляются наши товары.
+      </p>
+      <a class="production__to-order button" href="form.html">Cделать заказ</a>
     </section>
 
   </main>
 
   <footer class="page-footer">
-    <div class="page-footer__social social">
-      <ul class="social__list">
-        <li class="social-item">
-          <a href="#" class="social-link social-link--instagram">Мы в Интстаграме</a>
-        </li>
-        <li class="social-item">
-          <a href="#" class="social-link social-link--facebook">Мы в Фэйсбукке</a>
-        </li>
-        <li class="social-item">
-          <a href="#" class="social-link social-link--twitter">Мы в Твиттере</a>
-        </li>
-      </ul>
-    </div>
-    <div class="page-footer_copyright copyright">
-      <p class="copyright_text">Разработано
-        <a class="copyright-icon" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></p>
-    </div>
+    <ul class="page-footer__social-list">
+      <li class="page-footer__social-item">
+        <a href="#" class="page-footer__social-link page-footer__social-link--instagram">Мы в Интстаграме</a>
+      </li>
+      <li class="page-footer__social-item">
+        <a href="#" class="page-footer__social-link page-footer__social-link--facebook">Мы в Фэйсбукке</a>
+      </li>
+      <li class="page-footer__social-item">
+        <a href="#" class="page-footer__social-link page-footer__social-link--twitter">Мы в Твиттере</a>
+      </li>
+    </ul>
+    <p class="page-footer__copyright copyright__text">Разработано
+      <a class="copyright__link-icon" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+    </p>
   </footer>
+
+  <section class="popup visually-hidden">
+      <h2 class="popup__title">Добавить в корзину</h2>
+      <p class="popup__text">Выберите размер:</p>
+      <ul class="popup__size-list">
+        <li><button class="popup__size-item popup__size-item--active" type="button">S</button></li>
+        <li><button class="popup__size-item" type="button">M</button></li>
+        <li><button class="popup__size-item" type="button">L</button></li>
+      </ul>
+      <button class="popup__add-cart button" type="submit">Добавить</button>
+    </section>
 
   <script src="js/script.js"></script>
 </body>

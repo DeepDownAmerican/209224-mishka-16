@@ -10,21 +10,22 @@
 <body>
   <header class="page-header">
     <a class="page-header__logo">
-      <img class="header__logo-image" src="#" width="86" height="35" alt="логотип сайта мишка">
+      <img class="page-header__logo-image" src="#" width="86" height="35" alt="логотип сайта мишка">
     </a>
-    <button class="navigation-toggle" type="button">Открыть меню</button>
     <nav class="navigation">
+      <button class="navigation-toggle" type="button">Открыть меню</button>
       <ul class="navigation__list site-list">
-        <li class="navigation__item"><a class="navigation__link navigation__link--active" href="catalog.html">Каталог
-            товаров</a></li>
-        <li class="navigation__item"><a class="navigation__link" href="#">Вязание на заказ</a></li>
         <li class="navigation__item">
-          <form method="GET" action="https://echo.htmlacademy.ru">
-            <p><label for="search" aria-label="Поле поиска"></label>
-              <input class="navigation__item-field-search" type="search" id="search" placeholder="Поиск по сайту"></p>
-          </form>
+          <a class="navigation__link navigation__link--active" href="catalog.html">Каталог товаров</a>
         </li>
-        <li class="navigation__item"><a class="navigation__link navigation__link-cart" href="#">Корзина: пока пуста</a>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Вязание на заказ</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link navigation_search navigation_search--header" href="#">Поиск по сайту</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link navigation__link-cart" href="#">Корзина: пока пуста</a>
         </li>
       </ul>
     </nav>
@@ -32,10 +33,8 @@
 
   <main class="page-main">
 
-    <h1 class="visually-hidden">Мишка</h1>
-
     <section class="preview">
-      <h2 class="preview__title">Милые штуки ручной работы для дома</h2>
+      <h1 class="preview__title">Милые штуки ручной работы для дома</h1>
       <ul class="preview__list">
         <li class="preview__item"><a href="#">Предметы интерьера</a></li>
         <li class="preview__item"><a href="#">Детские игрушки</a></li>
@@ -84,8 +83,8 @@
     <section class="reviews">
       <h2 class="reviews__title">Отзывы</h2>
       <div class="reviews__list">
-        <blockquote class="reviews__item">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
-          лайков,
+        <blockquote class="reviews__item">
+          Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков,
           как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
           и мои фотографии сразу стали более стильными, а также набирают больше лайков!
         </blockquote>
@@ -93,8 +92,8 @@
         <cite class="reviews__author-mail">@misssssiskras</cite>
       </div>
       <div class="reviews-slider slider">
-        <button class="reviews__control reviews__control-previous" type="button">Предыдущий отзыв</button>
-        <button class="reviews__control reviews__control-next" type="button">Следующий отзыв</button>
+        <button class="reviews__control reviews__control--previous" type="button">Предыдущий отзыв</button>
+        <button class="reviews__control reviews__control--next" type="button">Следующий отзыв</button>
       </div>
       <a href="#" class="reviews__write button ">Написать</a>
     </section>
@@ -103,7 +102,8 @@
       <h2 class="contacts__title">Контакты</h2>
       <address class="contacts__address">
         <p class="contacts__address__text">e-mail:</p>
-        <a class="contacts__address__text contacts__address__e-mail" href="info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+        <a class="contacts__address__text contacts__address__e-mail"
+          href="info@mimimishkashop.ru">info@mimimishkashop.ru</a>
         <p class="contacts__address__text">адрес:</p>
         <p class="contacts__address__text">г. Санкт-Петербург,
           ул. Большая Конюшенная,
@@ -117,34 +117,31 @@
   </main>
 
   <footer class="page-footer">
-    <div class="page-footer__social social">
-      <ul class="social__list">
-        <li class="social-item">
-          <a href="#" class="social-link social-link--instagram">Мы в Интстаграме</a>
-        </li>
-        <li class="social-item">
-          <a href="#" class="social-link social-link--facebook">Мы в Фэйсбукке</a>
-        </li>
-        <li class="social-item">
-          <a href="#" class="social-link social-link--twitter">Мы в Твиттере</a>
-        </li>
-      </ul>
-    </div>
-    <div class="page-footer_copyright copyright">
-      <p class="copyright_text">Разработано
-        <a class="copyright-icon" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></p>
-    </div>
+    <ul class="page-footer__social-list">
+      <li class="page-footer__social-item">
+        <a href="#" class="page-footer__social-link page-footer__social-link--instagram">Мы в Интстаграме</a>
+      </li>
+      <li class="page-footer__social-item">
+        <a href="#" class="page-footer__social-link page-footer__social-link--facebook">Мы в Фэйсбукке</a>
+      </li>
+      <li class="page-footer__social-item">
+        <a href="#" class="page-footer__social-link page-footer__social-link--twitter">Мы в Твиттере</a>
+      </li>
+    </ul>
+    <p class="page-footer__copyright copyright__text">Разработано
+      <a class="copyright__link-icon" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+    </p>
   </footer>
 
-  <section class="popup popup-to-cart visually-hidden">
-    <h2 class="popup-to-cart__title">Добавить в корзину</h2>
-    <p class="popup-to-cart">Выберите размер:</p>
-    <div class="size__list">
-      <button class="size__item size__item--active" type="button">S</button>
-      <button class="size__item" type="button">M</button>
-      <button class="size__item" type="button">L</button>
-    </div>
-    <button class="to-cart__add button" type="submit">Добавить</button>
+  <section class="popup visually-hidden">
+    <h2 class="popup__title">Добавить в корзину</h2>
+    <p class="popup__text">Выберите размер:</p>
+    <ul class="popup__size-list">
+      <li><button class="popup__size-item popup__size-item--active" type="button">S</button></li>
+      <li><button class="popup__size-item" type="button">M</button></li>
+      <li><button class="popup__size-item" type="button">L</button></li>
+    </ul>
+    <button class="popup__add-cart button" type="submit">Добавить</button>
   </section>
 
   <script src="js/script.js"></script>
