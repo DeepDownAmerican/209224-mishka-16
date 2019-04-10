@@ -1,8 +1,8 @@
 @font-face {
   font-family: "Open Sans", sans-serif;
   src:
-      url(../fonts/opensans.woff) format("woff"),
-      url(../fonts/opensans.woff2) format("woff2");
+    url(../fonts/opensans.woff) format("woff"),
+    url(../fonts/opensans.woff2) format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -10,8 +10,8 @@
 @font-face {
   font-family: "Open Sans", sans-serif;
   src:
-      url(../fonts/opensansbold.woff) format("woff"),
-      url(../fonts/opensansbold.woff2) format("woff2");
+    url(../fonts/opensansbold.woff) format("woff"),
+    url(../fonts/opensansbold.woff2) format("woff2");
   font-weight: bold;
   font-style: normal;
 }
@@ -27,7 +27,7 @@ html {
 }
 
 body {
-  font-family: "Open Sans", Tahoma, sans-serif;
+  font-family: "Open Sans", "Tahoma", sans-serif;
 }
 
 a {
@@ -40,8 +40,8 @@ img {
 }
 
 .visually-hidden:not(:focus):not(:active),
-input[type=checkbox].visually-hidden,
-input[type=radio].visually-hidden {
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
 
   width: 1px;
