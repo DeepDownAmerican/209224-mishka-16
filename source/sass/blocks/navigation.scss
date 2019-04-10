@@ -1,0 +1,23 @@
+.navigation__toggle {
+  width: 20px;
+  height: 14px;
+
+  font-size: 0;
+
+  background-color: #ffffff;
+  border: none;
+
+  cursor: pointer;
+}
+
+.navigation__list {
+  @include lists;
+}
+
+.navigation__item {
+  min-height: 79px;
+}
+
+.navigation__link {
+  color: #000000;
+}

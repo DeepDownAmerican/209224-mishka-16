@@ -1,0 +1,31 @@
+.catalog__title {
+  min-height: 177px;
+
+  @include bold-text($bold-text, 27px, 30px);
+  background-color: #f1f1f1;
+}
+
+.catalog__list {
+  @include lists;
+}
+
+.catalog__item-title {
+  @include bold-text($bold-text, 17px, 24px);
+}
+
+.catalog__item-info {
+  @include paragraph($color-paragraph, 13px, 30px);
+}
+
+.catalog__item-price {
+  @include bold-text($bold-text, 15px, 24px);
+}
+
+.catalog__item-buy {
+  font-size: 0;
+
+  border: none;
+  background-color: #ffffff;
+
+  cursor: pointer;
+}

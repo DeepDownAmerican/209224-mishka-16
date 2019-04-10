@@ -1,0 +1,14 @@
+.popup__title {
+  @include bold-text($bold-text, 25px, 30px);
+}
+
+.popup__text {
+  @include paragraph($color-paragraph, 15px, 30px);
+}
+
+.popup .popup__add-cart {
+  color: #ffffff;
+  background-color: $primary-color;
+  text-transform: uppercase;
+  border: none;
+}

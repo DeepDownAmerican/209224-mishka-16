@@ -1,0 +1,12 @@
+.production__title {
+  @include bold-text($bold-text, 17px, 24px);
+}
+
+.production__info {
+  @include paragraph($color-paragraph, 13px, 24px);
+}
+
+.production__to-order {
+  font-size: 17px;
+  line-height: 16px;
+}

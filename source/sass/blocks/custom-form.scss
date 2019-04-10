@@ -1,0 +1,59 @@
+.custom__title {
+  min-height: 177px;
+
+  @include bold-text($bold-text, 27px, 30px);
+  background-color: #f1f1f1;
+}
+
+.custom__info {
+  @include paragraph($color-paragraph, 13px, 24px);
+}
+
+.custom-form__border {
+  border: none;
+}
+
+.custom-form__list {
+  @include lists;
+}
+
+.custom-form__style {
+  @include bold-text($bold-text, 17px, 18px);
+}
+
+.custom-form__desc {
+  @include bold-text($primary-color, 17px, 16px);
+  text-transform: uppercase;
+}
+
+.custom-form__field {
+  min-width: 260px;
+  min-height: 52px;
+
+  border: none;
+  border-bottom: 2px solid #444444;
+}
+
+.custom-form__field--extra {
+  border: 2px solid #444444;
+}
+
+.custom-form__field::placeholder {
+  @include placeholder;
+}
+
+.custom-form__field--phone::placeholder {
+  font-size: 19px;
+  line-height: 18px;
+}
+
+.custom-form__note {
+  @include paragraph($color-paragraph, 14px, 16px);
+}
+
+.custom-form__send-order {
+  font-size: 17px;
+  line-height: 16px;
+
+  cursor: pointer;
+}
