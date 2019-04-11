@@ -1,0 +1,40 @@
+.reviews__title {
+  @include bold-text($bold-text, 25px, 30px);
+}
+
+.reviews__item {
+  @include paragraph($color-paragraph, 15px, 20px);
+  margin: 0;
+}
+
+.reviews__author {
+  @include bold-text($bold-text, 17px, 24px);
+}
+
+.reviews__author-mail {
+  @include paragraph($color-paragraph, 17px, 30px);
+}
+
+.reviews__control {
+  width: 130px;
+  height: 52px;
+
+  margin: 0;
+
+  background-color: #ffffff;
+}
+
+.reviews__control--previous {
+  border: 1px solid #ececec;
+}
+
+.reviews__control--next {
+  margin-left: -5px;
+
+  border: 1px solid #ececec;
+}
+
+.reviews__write {
+  font-size: 18px;
+  line-height: 20px;
+}

@@ -1,0 +1,20 @@
+.contacts__title {
+  @include bold-text($bold-text, 18px, 30px);
+}
+
+.contacts__address-text {
+  @include paragraph($color-paragraph, 15px, 30px);
+  font-style: normal;
+}
+
+.contacts__feedback {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.contacts__pin {
+  margin-left: -189px;
+  margin-bottom: 212px;
+
+  z-index: 1;
+}

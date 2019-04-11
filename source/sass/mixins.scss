@@ -1,0 +1,30 @@
+@mixin container {
+  width: 260px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+@mixin lists {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin paragraph($color-paragraph, $size, $line-height) {
+  color: $color-paragraph;
+  font-size: $size;
+  line-height: $line-height;
+}
+
+@mixin bold-text($bold-text, $size, $line-height) {
+  color: $bold-text;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: 700;
+}
+
+@mixin placeholder {
+  color: $color-placeholder;
+  font-size: 17px;
+  line-height: 18px;
+}

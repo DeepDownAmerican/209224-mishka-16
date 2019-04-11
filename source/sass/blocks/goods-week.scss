@@ -1,0 +1,26 @@
+.goods-week__subtitle {
+  @include bold-text($bold-text, 25px, 30px);
+}
+
+.goods-week__title {
+  @include bold-text($primary-color, 17px, 20px);
+  text-transform: uppercase;
+}
+
+.goods-week-info {
+  @include paragraph($color-paragraph, 15px, 24px);
+}
+
+.features__item,
+.features__value {
+  @include paragraph($color-paragraph, 15px, 20px);
+}
+
+.goods-week__price {
+  @include bold-text($color-paragraph, 17px, 24px);
+}
+
+.goods-week__order {
+  font-size: 17px;
+  line-height: 20px;
+}

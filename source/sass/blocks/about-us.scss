@@ -1,0 +1,11 @@
+.about-us__title {
+  @include bold-text($bold-text, 25px, 30px);
+}
+
+.about-us__list {
+  @include lists;
+}
+
+.about-us__item {
+  @include bold-text($bold-text, 17px, 20px);
+}
