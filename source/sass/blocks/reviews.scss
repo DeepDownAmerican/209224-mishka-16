@@ -1,25 +1,49 @@
+.reviews {
+  @include container;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 655px;
+}
+
 .reviews__title {
   @include bold-text($bold-text, 25px, 30px);
+
+  margin: 0;
+  margin-bottom: 22px;
+}
+
+.reviews__list {
+  display: flex;
+  flex-direction: column;
 }
 
 .reviews__item {
-  @include paragraph($color-paragraph, 15px, 20px);
+  @include paragraph($color-paragraph, 15px, 30px);
+
   margin: 0;
+  margin-bottom: 28px;
 }
 
 .reviews__author {
   @include bold-text($bold-text, 17px, 24px);
+  font-style: normal;
 }
 
 .reviews__author-mail {
   @include paragraph($color-paragraph, 17px, 30px);
+  font-style: normal;
+}
+
+.reviews-slider {
+  margin-top: 32px;
+  margin-bottom: 37px;
 }
 
 .reviews__control {
   width: 130px;
   height: 52px;
-
-  margin: 0;
 
   background-color: #ffffff;
 }

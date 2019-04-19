@@ -25,7 +25,14 @@ html {
 }
 
 body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+
   font-family: "Open Sans", "Tahoma", sans-serif;
+  font-style: normal;
+
+  background-color: #ffffff;
 }
 
 a {

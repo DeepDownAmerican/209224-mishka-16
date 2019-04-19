@@ -1,5 +1,9 @@
 .page-footer__social-list {
   @include lists;
+
+  display: flex;
+  justify-content: space-around;
+  min-height: 80px;
 }
 
 .page-footer__social-link {
@@ -8,4 +12,9 @@
 
 .page-footer__copyright {
   @include bold-text($bold-text, 19px, 18px);
+
+  min-height: 80px;
+  margin: 0;
+
+  border-top: 1px solid #e5e5e5;
 }

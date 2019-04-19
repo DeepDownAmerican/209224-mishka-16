@@ -1,11 +1,34 @@
+.about-us {
+  @include container;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 830px;
+}
+
 .about-us__title {
+  margin: 0;
+  margin-bottom: 34px;
+
   @include bold-text($bold-text, 25px, 30px);
 }
 
 .about-us__list {
   @include lists;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .about-us__item {
   @include bold-text($bold-text, 17px, 20px);
+}
+
+.about-us__item-image {
+  fill: $primary-color;
+}
+
+.about-us__item--clear {
+  margin-bottom: 10px;
 }
