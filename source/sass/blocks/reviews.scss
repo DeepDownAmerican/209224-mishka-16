@@ -62,3 +62,72 @@
   font-size: 18px;
   line-height: 20px;
 }
+
+@media (min-width: $tablet-width) {
+  .reviews {
+    @include container-tablet;
+
+    position: relative;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    min-height: 542px;
+
+    background: url("../img/review@1x.jpg") 0 0 no-repeat;
+  }
+
+  .reviews__title {
+    @include bold-text($bold-text, 43px, 50px);
+
+    padding-top: 77px;
+
+    order: -2;
+  }
+
+  .reviews__list {
+    margin-top: -105px;
+  }
+
+  .reviews__item {
+    @include paragraph($color-paragraph, 17px, 30px);
+
+    min-width: 642px;
+
+    margin-bottom: 58px;
+  }
+
+  .reviews__author,
+  .reviews__author-mail {
+    width: 265px;
+  }
+
+  .reviews__author {
+    @include bold-text($bold-text, 18px, 24px);
+  }
+
+  .reviews__write {
+    @include bold-text($bold-text, 17px, 20px);
+
+    width: 175px;
+    min-height: 52px;
+
+    margin-left: 310px;
+    margin-top: 80px;
+
+    order: -1;
+  }
+
+  .reviews-slider {
+    position: absolute;
+    bottom: 96px;
+    right: 48px;
+  }
+
+  .reviews__control {
+    width: 90px;
+
+    border: none;
+  }
+}

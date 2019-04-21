@@ -62,3 +62,60 @@
   font-size: 18px;
   line-height: 20px;
 }
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    flex-wrap: wrap;
+
+    min-height: 927px;
+  }
+
+  .contacts__title {
+    @include bold-text($bold-text, 43px, 50px);
+    @include container-tablet;
+
+    padding-top: 61px;
+    padding-left: 45px;
+    margin-bottom: 49px;
+  }
+
+  .contacts__address-text {
+    @include paragraph($color-paragraph, 17px, 30px);
+  }
+
+  .contacts__address {
+    @include container-tablet;
+
+    flex-direction: row;
+
+    & .contacts__address-text:last-child {
+      min-width: 230px;
+    }
+
+    margin-bottom: 56px;
+  }
+
+  .contacts__address-address,
+  .contacts__address-email {
+    min-width: 334px;
+  }
+
+  .contacts__map {
+    @include container-tablet;
+    padding: 0;
+  }
+
+  .contacts__map-image {
+    width: 768px;
+    height: 457px;
+  }
+
+  .contacts__feedback {
+    @include bold-text($bold-text, 17px, 20px);
+
+    width: 230px;
+
+    margin-top: 51px;
+  }
+
+}
