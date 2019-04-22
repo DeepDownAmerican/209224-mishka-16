@@ -15,7 +15,7 @@
   height: 35px;
   width: 86px;
 
-  margin-top: 22px;
+  padding-top: 22px;
   margin-left: 116px;
 }
 
@@ -37,9 +37,14 @@
 @media (min-width: $desktop-width) {
   .page-header {
     @include container-desktop;
+
+    position: relative;
   }
 
   .page-header__logo {
+    position: absolute;
+    left: 50%;
+
     height: 72px;
     width: 149px;
   }

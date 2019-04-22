@@ -94,3 +94,21 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .about-us {
+    @include container-desktop;
+
+    min-height: 547px;
+
+    padding-left: 222px;
+    padding-top: 57px;
+    margin-bottom: 114px;
+  }
+
+  .about-us__title {
+    @include bold-text($bold-text, 53px, 57px);
+
+    margin-bottom: 46px;
+  }
+}

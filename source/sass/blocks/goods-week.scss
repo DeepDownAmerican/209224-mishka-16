@@ -82,17 +82,6 @@
 }
 
 @media (min-width: $tablet-width) {
-  .goods-week__header {
-    min-width: 668px;
-
-    margin-bottom: 49px;
-  }
-
-  .goods-week__subtitle--position,
-  .goods-week__title--position {
-    padding: 0;
-  }
-
   .goods-week {
     @include container-tablet;
 
@@ -100,6 +89,17 @@
 
     min-height: 627px;
     min-width: 668px;
+  }
+
+  .goods-week__header {
+    min-width: 667px;
+
+    margin-bottom: 49px;
+  }
+
+  .goods-week__subtitle--position,
+  .goods-week__title--position {
+    padding: 0;
   }
 
   .goods-week__subtitle {
@@ -111,7 +111,8 @@
 
     width: 90px;
 
-    margin-top: 14px;
+    margin: 0;
+    padding-top: 14px;
     margin-right: 20px;
 
     text-align: center;
@@ -161,6 +162,55 @@
   .goods-week__order {
     min-width: 292px;
   }
+}
 
+@media (min-width: $desktop-width) {
+  .goods-week {
+    @include container-desktop;
+
+    min-height: 805px;
+
+    padding-top: 121px;
+    padding-left: 87px;
+  }
+
+  .goods-week__header {
+    justify-content: flex-start;
+  }
+
+  .goods-week__subtitle {
+    @include bold-text($bold-text, 53px, 57px);
+
+    z-index: 1;
+  }
+
+  .goods-week__title {
+    margin-right: 44px;
+    padding-top: 18px;
+
+    order: -1;
+  }
+
+  .goods-week__middle {
+    min-width: 292px;
+
+    margin-left: 138px;
+  }
+
+  .goods-week-info {
+    margin-bottom: 47px;
+  }
+
+  .features__list {
+    margin-bottom: 111px;
+  }
+
+  .goods-week__image {
+    top: -158px;
+    left: 350px;
+
+    width: 525px;
+    height: 636px;
+  }
 }
 

@@ -2,7 +2,9 @@
   @include lists;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+
+  width: 142px;
   min-height: 80px;
 }
 
@@ -20,5 +22,9 @@
 }
 
 @media (min-width: $tablet-width) {
+
+}
+
+@media (min-width: $desktop-width) {
 
 }

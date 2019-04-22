@@ -93,6 +93,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 44px;
+    padding-top: 18px;
 
     border-top: 1px solid #ececec;
     background: #fafafa url("../img/hero-tablet@1x.jpg") -191px 0 no-repeat;
@@ -107,8 +108,8 @@
 
     @include paragraph($color-paragraph, 15px, 24px);
 
-    margin-left: 437px;
-    margin-top: 18px;
+    margin: 0;
+    padding-left: 437px;
   }
 
   .preview__title {
@@ -139,10 +140,40 @@
 
 @media (min-width: $desktop-width) {
   .preview {
+    @include container-desktop;
+
+    min-width: 1150px;
     min-height: 746px;
+
+    margin-top: -98px;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 18px;
 
-    background: url("../img/hero-desktop@1x.jpg") center 0 no-repeat;
+    background: #f9f9f9 url("../img/hero-desktop@1x.jpg") center 0 no-repeat;
+    background-size: 1150px 746px;
+  }
+
+  .preview__text {
+    margin: 0;
+    margin-bottom: 16px;
+    padding-left: 819px;
+  }
+
+  .preview__title {
+    @include bold-text($bold-text, 53px, 57px);
+
+    min-width: 620px;
+
+    margin-top: -190px;
+    margin-left: 0;
+  }
+
+  .preview__list {
+    min-width: 1050px;
+  }
+
+  .preview__item {
+    min-width: 525px;
   }
 }

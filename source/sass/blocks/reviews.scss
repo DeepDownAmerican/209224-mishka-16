@@ -76,6 +76,7 @@
     min-height: 542px;
 
     background: url("../img/review@1x.jpg") 0 0 no-repeat;
+    background-size: 350px 457px;
   }
 
   .reviews__title {
@@ -129,5 +130,46 @@
     width: 90px;
 
     border: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reviews {
+    @include container-desktop;
+
+    padding-top: 70px;
+    padding-left: 222px;
+
+    background-position-x: 50px;
+  }
+
+  .reviews__title {
+    @include bold-text($bold-text, 53px, 57px);
+
+    padding: 0;
+  }
+
+  .reviews__list {
+    min-height: 200px;
+
+    margin-top: -137px;
+    padding-left: 3px;
+  }
+
+  .reviews__item {
+    margin-bottom: 38px;
+  }
+
+  .reviews__author {
+    margin-bottom: 2px;
+  }
+
+  .reviews-slider {
+    bottom: 145px;
+  }
+
+  .reviews__write {
+    margin-left: 478px;
+    margin-top: 9px;
   }
 }

@@ -30,3 +30,11 @@
     height: 34px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    @include container-desktop;
+
+    padding-top: 50px;
+  }
+}
