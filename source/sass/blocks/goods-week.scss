@@ -18,7 +18,7 @@
   @include bold-text($primary-color, 17px, 20px);
 
   margin: 0;
-  margin-top: 5px;
+  padding-top: 5px;
 
   text-transform: uppercase;
 }
@@ -33,13 +33,12 @@
   @include paragraph($color-paragraph, 15px, 24px);
 
   margin: 0;
-  margin-top: 23px;
+  margin-bottom: 18px;
 }
 
 .features__list {
   min-height: 120px;
 
-  margin-top: 18px;
   margin-bottom: 29px;
 
   text-align: left;
@@ -63,6 +62,8 @@
 .goods-week__header {
   flex-direction: row;
   justify-content: space-between;
+
+  margin-bottom: 23px;
 }
 
 .goods-week__price {
@@ -213,4 +214,3 @@
     height: 636px;
   }
 }
-

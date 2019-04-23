@@ -9,6 +9,7 @@
   min-height: 489px;
 
   padding: 0;
+  padding-top: 71px;
   margin-bottom: 25px;
   margin-left: auto;
   margin-right: auto;
@@ -29,8 +30,6 @@
   @include bold-text($bold-text, 27px, 30px);
 
   width: 246px;
-
-  margin-top: 71px;
 
   text-align: center;
 }
@@ -61,10 +60,6 @@
   justify-content: space-between;
   font-size: 19px;
   line-height: 24px;
-
-  & .preview__link-text {
-    color: #ffffff;
-  }
 }
 
 .preview__link-text {
@@ -72,7 +67,12 @@
 
   width: 130px;
 
-  margin-top: 30px;
+  padding-top: 30px;
+  margin: 0;
+}
+
+.preview__list .preview__link-text {
+  color: #ffffff;
 }
 
 .preview__link-image {
@@ -101,6 +101,9 @@
 
   .preview__wrapper {
     @include container-tablet;
+
+    padding: 0 36px;
+    width: auto;
   }
 
   .preview__text {
@@ -126,15 +129,8 @@
     width: 334px;
   }
 
-  .preview__wrapper {
-    padding: 0 36px;
-    width: auto;
-  }
-
   .preview__link-text {
     @include bold-text($bold-text, 20px, 30px);
-
-    margin-top: 28px;
   }
 }
 

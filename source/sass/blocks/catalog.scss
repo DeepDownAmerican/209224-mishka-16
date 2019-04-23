@@ -119,6 +119,7 @@
 
     min-width: 668px;
     min-height: 334px;
+
     &:last-child {
       min-height: 334px;
     }
@@ -147,6 +148,7 @@
     @include paragraph($color-paragraph, 15px, 30px);
 
     margin-bottom: 198px;
+
     &:last-child {
       margin-bottom: 174px;
     }
@@ -164,7 +166,6 @@
     @include container-desktop;
 
     min-height: 659px;
-    
   }
 
   .catalog__title {
@@ -211,7 +212,4 @@
   .catalog-tablet__column {
     width: auto;
   }
-
-
-
 }
