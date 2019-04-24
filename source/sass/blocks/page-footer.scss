@@ -1,3 +1,37 @@
 .page-footer {
+  @include container;
+
   background-color: #f1f1f1;
+}
+
+.page-footer__logo {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    @include container-tablet;
+
+    display: flex;
+    justify-content: space-between;
+
+    min-height: 143px;
+
+    padding-top: 50px;
+  }
+
+  .page-footer__logo {
+    display: block;
+
+    width: 102px;
+    height: 34px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    @include container-desktop;
+
+    padding-top: 50px;
+  }
 }

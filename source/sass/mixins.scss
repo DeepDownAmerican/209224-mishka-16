@@ -1,6 +1,18 @@
 @mixin container {
-  width: 260px;
+  width: 320px;
   padding: 0 30px;
+  margin: 0 auto;
+}
+
+@mixin container-tablet {
+  width: 768px;
+  padding: 0 50px;
+  margin: 0 auto;
+}
+
+@mixin container-desktop {
+  width: 1150px;
+  padding: 0 50px;
   margin: 0 auto;
 }
 
@@ -20,7 +32,7 @@
   color: $bold-text;
   font-size: $size;
   line-height: $line-height;
-  font-weight: 700;
+  font-weight: bold;
 }
 
 @mixin placeholder {

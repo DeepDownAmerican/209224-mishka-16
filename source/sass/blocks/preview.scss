@@ -1,16 +1,50 @@
 .preview {
-  width: 575px;
-  height: 373px;
+  @include container;
 
-  background: url("../img/hero-mobile@1x.jpg") 0 0 no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-width: 320px;
+  min-height: 489px;
+
+  padding: 0;
+  padding-top: 71px;
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background: #fafafa url("../img/hero-mobile@1x.jpg") -127px -18px no-repeat;
+  background-size: 575px 373px;
+}
+
+.preview__text {
+  display: none;
+}
+
+.preview__wrapper {
+  @include container;
 }
 
 .preview__title {
   @include bold-text($bold-text, 27px, 30px);
+
+  width: 246px;
+
+  text-align: center;
 }
 
 .preview__list {
   @include lists;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  min-width: 320px;
+}
+
+.preview__item {
+  min-height: 103px;
 }
 
 .preview__item:nth-child(1) {
@@ -22,12 +56,120 @@
 }
 
 .preview__link {
+  display: flex;
+  justify-content: space-between;
   font-size: 19px;
   line-height: 24px;
+}
 
+.preview__link-text {
+  @include bold-text(#ffffff, 19px, 24px);
+
+  width: 130px;
+
+  padding-top: 30px;
+  margin: 0;
+}
+
+.preview__list .preview__link-text {
   color: #ffffff;
 }
 
-.preview__item {
-  min-height: 103px;
+.preview__link-image {
+  margin-top: 23px;
+
+  fill: #35a999;
+}
+
+@media (min-width: $tablet-width) {
+  .preview {
+    @include container-tablet;
+
+    justify-content: space-between;
+
+    min-height: 746px;
+
+    margin-top: -80px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 44px;
+    padding-top: 18px;
+
+    border-top: 1px solid #ececec;
+    background: #fafafa url("../img/hero-tablet@1x.jpg") -191px 0 no-repeat;
+  }
+
+  .preview__wrapper {
+    @include container-tablet;
+
+    padding: 0 36px;
+    width: auto;
+  }
+
+  .preview__text {
+    display: block;
+
+    @include paragraph($color-paragraph, 15px, 24px);
+
+    margin: 0;
+    padding-left: 437px;
+  }
+
+  .preview__title {
+    @include bold-text($bold-text, 43px, 50px);
+
+    width: 500px;
+
+    margin-top: -190px;
+    margin-left: -23px;
+  }
+
+  .preview__item {
+    min-height: 117px;
+    width: 334px;
+  }
+
+  .preview__link-text {
+    @include bold-text($bold-text, 20px, 30px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .preview {
+    @include container-desktop;
+
+    min-width: 1150px;
+    min-height: 746px;
+
+    margin-top: -98px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 18px;
+
+    background: #f9f9f9 url("../img/hero-desktop@1x.jpg") center 0 no-repeat;
+    background-size: 1150px 746px;
+  }
+
+  .preview__text {
+    margin: 0;
+    margin-bottom: 16px;
+    padding-left: 819px;
+  }
+
+  .preview__title {
+    @include bold-text($bold-text, 53px, 57px);
+
+    min-width: 620px;
+
+    margin-top: -190px;
+    margin-left: 0;
+  }
+
+  .preview__list {
+    min-width: 1050px;
+  }
+
+  .preview__item {
+    min-width: 525px;
+  }
 }

@@ -1,4 +1,13 @@
+.about-us {
+  @include container;
+
+  min-height: 830px;
+}
+
 .about-us__title {
+  margin: 0;
+  margin-bottom: 34px;
+
   @include bold-text($bold-text, 25px, 30px);
 }
 
@@ -8,4 +17,97 @@
 
 .about-us__item {
   @include bold-text($bold-text, 17px, 20px);
+}
+
+.about-us__item-image {
+  fill: $primary-color;
+}
+
+.about-us__item--clear {
+  margin-bottom: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .about-us {
+    @include container-tablet;
+
+    min-height: 594px;
+
+    padding-top: 4px;
+  }
+
+  .about-us__title {
+    @include bold-text($bold-text, 43px, 50px);
+
+    min-width: 668px;
+  }
+
+  .about-us__list {
+    @include lists;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .about-us__item {
+    &:nth-child(1) {
+      width: 240px;
+
+      margin-right: 95px;
+
+      order: 1;
+    }
+
+    &:nth-child(2) {
+      width: 240px;
+
+      margin-right: 95px;
+
+      order: 3;
+    }
+
+    &:nth-child(3) {
+      width: 240px;
+
+      margin-right: 95px;
+
+      order: 5;
+    }
+
+    &:nth-child(4) {
+      width: 260px;
+
+      order: 2;
+    }
+
+    &:nth-child(5) {
+      width: 300px;
+
+      order: 4;
+    }
+
+    &:nth-child(6) {
+      width: 260px;
+
+      order: 6;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about-us {
+    @include container-desktop;
+
+    min-height: 547px;
+
+    padding-left: 222px;
+    padding-top: 57px;
+    margin-bottom: 114px;
+  }
+
+  .about-us__title {
+    @include bold-text($bold-text, 53px, 57px);
+
+    margin-bottom: 46px;
+  }
 }

@@ -1,1 +1,51 @@
-// Здесь будут стили
+.page-header {
+  @include container;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  padding: 0;
+}
+
+.navigation__wrapper {
+  @include container;
+}
+
+.page-header__logo {
+  height: 35px;
+  width: 86px;
+
+  padding-top: 22px;
+  margin-left: 116px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    @include container-tablet;
+
+    flex-wrap: nowrap;
+  }
+
+  .page-header__logo {
+    height: 46px;
+    width: 113px;
+
+    margin-left: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    @include container-desktop;
+
+    position: relative;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    left: 50%;
+
+    height: 72px;
+    width: 149px;
+  }
+}

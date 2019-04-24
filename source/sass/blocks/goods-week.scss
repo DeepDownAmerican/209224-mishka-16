@@ -1,26 +1,205 @@
+.goods-week {
+  @include container;
+
+  min-height: 826px;
+}
+
 .goods-week__subtitle {
   @include bold-text($bold-text, 25px, 30px);
+
+  margin: 0;
+  padding-top: 2px;
 }
 
 .goods-week__title {
   @include bold-text($primary-color, 17px, 20px);
+
+  margin: 0;
+  padding-top: 5px;
+
   text-transform: uppercase;
+}
+
+.goods-week__header {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 23px;
 }
 
 .goods-week-info {
   @include paragraph($color-paragraph, 15px, 24px);
+
+  margin: 0;
+  margin-bottom: 18px;
+}
+
+.features__list {
+  min-height: 120px;
+
+  margin-bottom: 29px;
+
+  text-align: left;
 }
 
 .features__item,
 .features__value {
   @include paragraph($color-paragraph, 15px, 20px);
+
+  border-bottom: 1px solid #ececec;
+}
+
+.features__item {
+  width: 95px;
+}
+
+.features__value {
+  width: 165px;
 }
 
 .goods-week__price {
   @include bold-text($color-paragraph, 17px, 24px);
+
+  margin-top: 24px;
+  margin-bottom: 27px;
+
+  text-align: center;
 }
 
 .goods-week__order {
+  height: 52px;
+
   font-size: 17px;
   line-height: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .goods-week {
+    @include container-tablet;
+
+    flex-wrap: wrap;
+
+    min-height: 627px;
+    min-width: 668px;
+  }
+
+  .goods-week__header {
+    flex-direction: row;
+    justify-content: space-between;
+
+    min-width: 667px;
+
+    margin-bottom: 49px;
+  }
+
+  .goods-week__subtitle--position,
+  .goods-week__title--position {
+    padding: 0;
+  }
+
+  .goods-week__subtitle {
+    @include bold-text($bold-text, 43px, 50px);
+  }
+
+  .goods-week__title {
+    @include bold-text($primary-color, 17px, 17px);
+
+    width: 90px;
+
+    margin: 0;
+    padding-top: 14px;
+    margin-right: 20px;
+
+    text-align: center;
+  }
+
+  .goods-week__middle {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 292px;
+    min-height: 404px;
+  }
+
+  .goods-week__price {
+    @include bold-text($bold-text, 20px, 24px);
+
+    margin: 0;
+    margin-bottom: 34px;
+  }
+
+  .goods-week-info {
+    @include paragraph($color-paragraph, 17px, 30px);
+
+    margin-bottom: 35px;
+  }
+
+  .features__list {
+    margin-bottom: 57px;
+  }
+
+  .goods-week__image {
+    position: absolute;
+    left: 334px;
+    top: 4px;
+
+    width: 333px;
+    height: 404px;
+  }
+
+  .goods-week__order {
+    min-width: 292px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .goods-week {
+    @include container-desktop;
+
+    min-height: 805px;
+
+    padding-top: 121px;
+    padding-left: 87px;
+  }
+
+  .goods-week__header {
+    justify-content: flex-start;
+  }
+
+  .goods-week__subtitle {
+    @include bold-text($bold-text, 53px, 57px);
+
+    z-index: 1;
+  }
+
+  .goods-week__title {
+    margin-right: 44px;
+    padding-top: 18px;
+
+    order: -1;
+  }
+
+  .goods-week__middle {
+    min-width: 292px;
+
+    margin-left: 138px;
+  }
+
+  .goods-week-info {
+    margin-bottom: 47px;
+  }
+
+  .features__list {
+    margin-bottom: 111px;
+  }
+
+  .goods-week__image {
+    top: -158px;
+    left: 350px;
+
+    width: 525px;
+    height: 636px;
+  }
 }

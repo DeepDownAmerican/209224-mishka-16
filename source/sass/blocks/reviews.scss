@@ -1,25 +1,41 @@
+.reviews {
+  @include container;
+
+  min-height: 655px;
+}
+
 .reviews__title {
   @include bold-text($bold-text, 25px, 30px);
+
+  margin: 0;
+  margin-bottom: 22px;
 }
 
 .reviews__item {
-  @include paragraph($color-paragraph, 15px, 20px);
+  @include paragraph($color-paragraph, 15px, 30px);
+
   margin: 0;
+  margin-bottom: 28px;
 }
 
 .reviews__author {
   @include bold-text($bold-text, 17px, 24px);
+  font-style: normal;
 }
 
 .reviews__author-mail {
   @include paragraph($color-paragraph, 17px, 30px);
+  font-style: normal;
+}
+
+.reviews-slider {
+  margin-top: 32px;
+  margin-bottom: 37px;
 }
 
 .reviews__control {
   width: 130px;
   height: 52px;
-
-  margin: 0;
 
   background-color: #ffffff;
 }
@@ -37,4 +53,118 @@
 .reviews__write {
   font-size: 18px;
   line-height: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .reviews {
+    @include container-tablet;
+
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    min-height: 542px;
+
+    background: url("../img/review@1x.jpg") 0 0 no-repeat;
+    background-size: 350px 457px;
+  }
+
+  .reviews__title {
+    @include bold-text($bold-text, 43px, 50px);
+
+    padding-top: 77px;
+
+    order: -2;
+  }
+
+  .reviews__list {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: -105px;
+  }
+
+  .reviews__item {
+    @include paragraph($color-paragraph, 17px, 30px);
+
+    min-width: 642px;
+
+    margin-bottom: 58px;
+  }
+
+  .reviews__author,
+  .reviews__author-mail {
+    width: 265px;
+  }
+
+  .reviews__author {
+    @include bold-text($bold-text, 18px, 24px);
+  }
+
+  .reviews__write {
+    @include bold-text($bold-text, 17px, 20px);
+
+    width: 175px;
+    min-height: 52px;
+
+    margin-left: 310px;
+    margin-top: 80px;
+
+    order: -1;
+  }
+
+  .reviews-slider {
+    position: absolute;
+    bottom: 96px;
+    right: 48px;
+  }
+
+  .reviews__control {
+    width: 90px;
+
+    border: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reviews {
+    @include container-desktop;
+
+    padding-top: 70px;
+    padding-left: 222px;
+
+    background-position-x: 50px;
+  }
+
+  .reviews__title {
+    @include bold-text($bold-text, 53px, 57px);
+
+    padding: 0;
+  }
+
+  .reviews__list {
+    min-height: 200px;
+
+    margin-top: -137px;
+    padding-left: 3px;
+  }
+
+  .reviews__item {
+    margin-bottom: 38px;
+  }
+
+  .reviews__author {
+    margin-bottom: 2px;
+  }
+
+  .reviews-slider {
+    bottom: 145px;
+  }
+
+  .reviews__write {
+    margin-left: 478px;
+    margin-top: 9px;
+  }
 }
