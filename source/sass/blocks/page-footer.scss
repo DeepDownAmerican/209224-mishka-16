@@ -1,9 +1,6 @@
 .page-footer {
   @include container;
 
-  display: flex;
-  flex-direction: column;
-
   background-color: #f1f1f1;
 }
 
@@ -15,7 +12,7 @@
   .page-footer {
     @include container-tablet;
 
-    flex-direction: row;
+    display: flex;
     justify-content: space-between;
 
     min-height: 143px;

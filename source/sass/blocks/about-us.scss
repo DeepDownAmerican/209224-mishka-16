@@ -1,9 +1,6 @@
 .about-us {
   @include container;
 
-  display: flex;
-  flex-direction: column;
-
   min-height: 830px;
 }
 
@@ -16,9 +13,6 @@
 
 .about-us__list {
   @include lists;
-
-  display: flex;
-  flex-direction: column;
 }
 
 .about-us__item {
@@ -51,7 +45,7 @@
   .about-us__list {
     @include lists;
 
-    flex-direction: row;
+    display: flex;
     flex-wrap: wrap;
   }
 

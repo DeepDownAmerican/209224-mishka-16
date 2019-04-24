@@ -15,8 +15,6 @@
 
 .contacts__address {
   @include container;
-  display: flex;
-  flex-direction: column;
 
   margin-bottom: 38px;
 }
@@ -43,7 +41,6 @@
 }
 
 .contacts__address--email {
-  display: block;
   margin-left: 31px;
 }
 
@@ -86,7 +83,7 @@
   .contacts__address {
     @include container-tablet;
 
-    flex-direction: row;
+    display: flex;
 
     & .contacts__address-text:last-child {
       min-width: 230px;

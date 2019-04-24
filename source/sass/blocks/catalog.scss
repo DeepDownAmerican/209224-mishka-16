@@ -24,9 +24,6 @@
 
 .catalog__list {
   @include lists;
-
-  display: flex;
-  flex-direction: column;
 }
 
 .catalog__item {
@@ -188,7 +185,7 @@
   }
 
   .catalog__list {
-    flex-direction: row;
+    display: flex;
   }
 
   .catalog__item {

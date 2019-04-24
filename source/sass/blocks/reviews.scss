@@ -1,9 +1,6 @@
 .reviews {
   @include container;
 
-  display: flex;
-  flex-direction: column;
-
   min-height: 655px;
 }
 
@@ -12,11 +9,6 @@
 
   margin: 0;
   margin-bottom: 22px;
-}
-
-.reviews__list {
-  display: flex;
-  flex-direction: column;
 }
 
 .reviews__item {
@@ -69,7 +61,7 @@
 
     position: relative;
 
-    flex-direction: row;
+    display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
 
@@ -88,6 +80,9 @@
   }
 
   .reviews__list {
+    display: flex;
+    flex-direction: column;
+
     margin-top: -105px;
   }
 
