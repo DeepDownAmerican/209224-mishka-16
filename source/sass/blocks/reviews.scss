@@ -20,6 +20,7 @@
 
 .reviews__author {
   @include bold-text($bold-text, 17px, 24px);
+
   font-style: normal;
 }
 
@@ -51,6 +52,8 @@
 }
 
 .reviews__write {
+  padding-top: 13px;
+
   font-size: 18px;
   line-height: 20px;
 }

@@ -31,6 +31,9 @@
 
   width: 246px;
 
+  margin: 0;
+  margin-left: 7px;
+
   text-align: center;
 }
 
@@ -58,6 +61,7 @@
 .preview__link {
   display: flex;
   justify-content: space-between;
+
   font-size: 19px;
   line-height: 24px;
 }
@@ -67,7 +71,7 @@
 
   width: 130px;
 
-  padding-top: 30px;
+  padding-top: 25px;
   margin: 0;
 }
 
@@ -120,8 +124,8 @@
 
     width: 500px;
 
-    margin-top: -190px;
-    margin-left: -23px;
+    margin: 0;
+    margin-top: -181px;
   }
 
   .preview__item {

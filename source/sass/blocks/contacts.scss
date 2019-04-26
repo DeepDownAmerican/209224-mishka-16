@@ -9,8 +9,8 @@
   @include container;
   @include bold-text($bold-text, 18px, 30px);
 
-  margin-top: 8px;
-  margin-bottom: 25px;
+  margin-top: 9px;
+  margin-bottom: 26px;
 }
 
 .contacts__address {
@@ -24,7 +24,8 @@
   display: flex;
 }
 
-.contacts__address-email--position {
+.contacts__address-email {
+
   margin-bottom: 30px;
 }
 
@@ -41,7 +42,19 @@
 }
 
 .contacts__address--email {
+  position: relative;
+
   margin-left: 31px;
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    width: 176px;
+    height: 1px;
+
+    background-color: $primary-color;
+  }
 }
 
 .contacts__map {
@@ -55,6 +68,7 @@
   width: 260px;
 
   margin-top: 40px;
+  padding-top: 13px;
 
   font-size: 18px;
   line-height: 20px;
@@ -95,6 +109,21 @@
   .contacts__address-address,
   .contacts__address-email {
     min-width: 334px;
+  }
+
+  .contacts__address--email {
+    margin-left: 22px;
+
+    &::after {
+      top: 29px;
+      left: 4px;
+
+      width: 200px;
+    }
+  }
+
+  .contacts__address-address .contacts__address-text:last-child {
+    margin-left: 24px;
   }
 
   .contacts__map {
