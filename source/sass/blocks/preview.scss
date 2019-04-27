@@ -48,6 +48,19 @@
 
 .preview__item {
   min-height: 103px;
+
+  &:hover {
+    min-height: 108px;
+
+    & .preview__link-text {
+      padding-top: 20px;
+    }
+  }
+
+  &:active .preview__link-text,
+  &:active .preview__link-image {
+    opacity: 0.3;
+  }
 }
 
 .preview__item:nth-child(1) {

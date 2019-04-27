@@ -8,6 +8,12 @@
   display: none;
 }
 
+.page-footer__logo-image {
+  &:hover {
+    fill: $primary-color;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .page-footer {
     @include container-tablet;
@@ -36,4 +42,9 @@
 
     padding-top: 50px;
   }
+
+  .page-footer__logo {
+    padding-top: 0;
+  }
 }
+

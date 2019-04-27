@@ -34,11 +34,17 @@
 @media (min-width: $tablet-width) {
   .page-footer__copyright {
     padding-right: 56px;
-
   }
 
   .page-footer__copyright-image {
     bottom: 4px;
     left: 156px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .page-footer__copyright {
+    padding-top: 12px;
   }
 }

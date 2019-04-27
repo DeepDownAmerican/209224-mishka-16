@@ -12,11 +12,21 @@
 }
 
 .page-header__logo {
+  padding-top: 22px;
+  margin-left: 116px;
+}
+
+.page-header__logo-image {
   height: 35px;
   width: 86px;
 
-  padding-top: 22px;
-  margin-left: 116px;
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -27,10 +37,12 @@
   }
 
   .page-header__logo {
+    margin-left: 0;
+  }
+
+  .page-header__logo-image {
     height: 46px;
     width: 113px;
-
-    margin-left: 0;
   }
 }
 
@@ -43,8 +55,12 @@
 
   .page-header__logo {
     position: absolute;
-    left: 50%;
+    left: 495px;
 
+    padding-top: 0;
+  }
+
+  .page-header__logo-image {
     height: 72px;
     width: 149px;
   }
