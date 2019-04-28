@@ -132,6 +132,8 @@
 
 .custom-form__style {
   @include bold-text($bold-text, 17px, 18px);
+
+  position: relative;
 }
 
 .custom-form__field {
@@ -220,6 +222,73 @@
   line-height: 16px;
 
   cursor: pointer;
+}
+
+.custom-form__radio + .custom-form__style::before {
+  position: absolute;
+  content: "";
+  top: -5px;
+  left: -63px;
+
+  width: 40px;
+  height: 40px;
+
+  border: 2px solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.custom-form__radio:checked + .custom-form__style::after {
+  position: absolute;
+  content: "";
+
+  top: 7px;
+  left: -51px;
+
+  width: 16px;
+  height: 16px;
+
+  background-color: $primary-color;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.custom-form__checkbox + .custom-form__style::before {
+  position: absolute;
+  content: "";
+  top: -7px;
+  left: -63px;
+
+  width: 40px;
+  height: 40px;
+
+  border: 2px solid #000000;
+  cursor: pointer;
+}
+
+.custom-form__checkbox:checked + .custom-form__style::after {
+  position: absolute;
+  content: "";
+  top: 7px;
+  left: -55px;
+
+  width: 40px;
+  height: 40px;
+
+  background: url("../img/icon-tick.svg") 0 0 no-repeat;
+  background-size: 22px 16px;
+
+  cursor: pointer;
+}
+
+.custom-form__radio:hover + .custom-form__style::before,
+.custom-form__checkbox:hover + .custom-form__style::before {
+  border: 2px solid $primary-color;
+}
+
+.custom-form__radio:active + .custom-form__style::before,
+.custom-form__checkbox:active + .custom-form__style::before {
+  border: 2px solid #c7c7c7;
 }
 
 @media (min-width: $tablet-width) {
@@ -458,6 +527,40 @@
     width: 230px;
 
     margin-left: 50px;
+  }
+
+  .custom-form__radio + .custom-form__style::before {
+    top: -11px;
+    left: -81px;
+
+    width: 52px;
+    height: 52px;
+  }
+
+  .custom-form__radio:checked + .custom-form__style::after {
+    top: 4px;
+    left: -65px;
+
+    width: 21px;
+    height: 21px;
+  }
+
+  .custom-form__checkbox + .custom-form__style::before {
+    top: -11px;
+    left: -81px;
+
+    width: 54px;
+    height: 52px;
+  }
+
+  .custom-form__checkbox:checked + .custom-form__style::after {
+    top: 4px;
+    left: -70px;
+
+    width: 40px;
+    height: 40px;
+
+    background-size: 33px 22px;
   }
 }
 

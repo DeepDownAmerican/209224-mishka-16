@@ -34,6 +34,8 @@
 @media (min-width: $tablet-width) {
   .page-footer__copyright {
     padding-right: 56px;
+
+    border-top: 0;
   }
 
   .page-footer__copyright-image {
