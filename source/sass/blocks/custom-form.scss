@@ -200,13 +200,13 @@
   }
 }
 
-.custom-form__field--phone:hover .custom-form__image--phone,
-.custom-form__field--email:hover .custom-form__image--email {
+.custom-form__field--phone:hover + .custom-form__image--phone,
+.custom-form__field--email:hover + .custom-form__image--email {
   fill: $primary-color;
 }
 
-.custom-form__field--phone:active .custom-form__image--phone,
-.custom-form__field--email:active .custom-form__image--email {
+.custom-form__field--phone:active + .custom-form__image--phone,
+.custom-form__field--email:active + .custom-form__image--email {
   fill: $primary-color;
 }
 
@@ -488,6 +488,11 @@
     padding-left: 16px;
   }
 
+  .custom-form__field--phone,
+  .custom-form__field--email {
+    background-color: #f1f1f1;
+  }
+
   .custom-form__wrapper:nth-child(6) {
     @include container-tablet;
 
@@ -695,7 +700,7 @@
   .custom-form__image--phone {
     top: 10px;
     right: 183px;
-}
+  }
 
   .custom-form__field--phone,
   .custom-form__field--email {
