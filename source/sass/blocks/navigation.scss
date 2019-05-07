@@ -43,8 +43,6 @@
   flex-direction: column;
 
   min-width: 320px;
-
-  z-index: 5;
 }
 
 .navigation__item {
@@ -161,7 +159,7 @@
     }
 
     &:nth-child(4) {
-      margin-left: 327px;
+      margin-left: 326px;
 
       order: -2;
     }
