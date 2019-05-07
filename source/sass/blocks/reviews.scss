@@ -89,6 +89,13 @@
       url("../img/bg-zigzag-line.svg") 0 525px no-repeat;
     background-size: 350px 457px,
       772px 17px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: url("../img/review@2x.jpg") 0 0 no-repeat,
+        url("../img/bg-zigzag-line.svg") 0 525px no-repeat;
+      background-size: 350px 457px,
+        772px 17px;
+    }
   }
 
   .reviews__title {
@@ -167,6 +174,7 @@
     @include bold-text($bold-text, 53px, 57px);
 
     padding: 0;
+    margin-bottom: 17px;
   }
 
   .reviews__list {
@@ -189,7 +197,7 @@
   }
 
   .reviews-slider {
-    bottom: 145px;
+    bottom: 150px;
   }
 
   .reviews__write {

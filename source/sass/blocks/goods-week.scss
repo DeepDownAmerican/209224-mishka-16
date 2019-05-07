@@ -58,6 +58,11 @@
   width: 165px;
 }
 
+.goods-week__image {
+  width: 260px;
+  height: 315px;
+}
+
 .goods-week__price {
   @include bold-text($color-paragraph, 17px, 24px);
 
@@ -148,7 +153,8 @@
     left: 334px;
     top: 4px;
 
-    width: 333px;
+    width: auto;
+    max-width: 333px;
     height: 404px;
   }
 
@@ -212,7 +218,8 @@
     top: -158px;
     left: 350px;
 
-    width: 525px;
+    width: auto;
+    max-width: 525px;
     height: 636px;
   }
 }
