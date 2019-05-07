@@ -9,8 +9,8 @@
   @include container;
   @include bold-text($bold-text, 18px, 30px);
 
-  margin-top: 8px;
-  margin-bottom: 25px;
+  margin-top: 9px;
+  margin-bottom: 26px;
 }
 
 .contacts__address {
@@ -24,7 +24,8 @@
   display: flex;
 }
 
-.contacts__address-email--position {
+.contacts__address-email {
+
   margin-bottom: 30px;
 }
 
@@ -41,7 +42,27 @@
 }
 
 .contacts__address--email {
+  position: relative;
+
   margin-left: 31px;
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    width: 176px;
+    height: 1px;
+
+    background-color: $primary-color;
+  }
+
+  &:hover {
+    color: $primary-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .contacts__map {
@@ -55,6 +76,7 @@
   width: 260px;
 
   margin-top: 40px;
+  padding-top: 13px;
 
   font-size: 18px;
   line-height: 20px;
@@ -71,9 +93,23 @@
     @include bold-text($bold-text, 43px, 50px);
     @include container-tablet;
 
+    position: relative;
+
     padding-top: 61px;
     padding-left: 45px;
     margin-bottom: 49px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 46px;
+      left: 668px;
+
+      width: 47px;
+      height: 81px;
+
+      background: url("../img/icon-flag.svg") 0 0 no-repeat;
+    }
   }
 
   .contacts__address-text {
@@ -95,6 +131,21 @@
   .contacts__address-address,
   .contacts__address-email {
     min-width: 334px;
+  }
+
+  .contacts__address--email {
+    margin-left: 22px;
+
+    &::after {
+      top: 29px;
+      left: 4px;
+
+      width: 200px;
+    }
+  }
+
+  .contacts__address-address .contacts__address-text:last-child {
+    margin-left: 24px;
   }
 
   .contacts__map {
@@ -125,7 +176,7 @@
     min-height: 633px;
 
     padding-left: 220px;
-    padding-top: 146px;
+    padding-top: 141px;
   }
 
   .contacts * {
@@ -137,6 +188,11 @@
     @include bold-text($bold-text, 53px, 57px);
 
     margin-bottom: 49px;
+
+    &::after {
+      top: -8px;
+      left: -107px;
+    }
   }
 
   .contacts__address {
@@ -156,6 +212,9 @@
     padding-left: 4px;
   }
 
+  .contacts__address--email {
+    margin-left: 24px;
+  }
 
   .contacts__map-image {
     position: absolute;
@@ -167,6 +226,7 @@
   }
 
   .contacts__feedback {
+    padding-top: 13px;
     margin-left: 5px;
   }
 }

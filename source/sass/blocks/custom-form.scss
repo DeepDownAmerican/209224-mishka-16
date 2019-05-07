@@ -38,6 +38,8 @@
 }
 
 .custom-form__wrapper {
+  position: relative;
+
   padding: 0;
 
   &:nth-child(1) {
@@ -72,6 +74,8 @@
 .custom-form__desc {
   @include bold-text($primary-color, 17px, 16px);
 
+  position: relative;
+
   margin-bottom: 33px;
 
   text-transform: uppercase;
@@ -93,8 +97,33 @@
   }
 }
 
+.custom-form__desc::after {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: 62px;
+
+  width: 198px;
+  height: 1px;
+
+  background-color: $primary-color;
+}
+
+.custom-form__desc--email::after {
+  left: 80px;
+
+  width: 179px;
+}
+
 .custom-form__list {
   @include lists;
+
+  padding-left: 63px;
+}
+
+.custom-form__wrapper:nth-child(3) .custom-form__list {
+  padding-left: 0;
 }
 
 .custom-form__item {
@@ -104,11 +133,7 @@
 .custom-form__style {
   @include bold-text($bold-text, 17px, 18px);
 
-  padding-left: 61px;
-}
-
-.custom-form__wrapper:nth-child(3) .custom-form__style {
-  padding-left: 0;
+  position: relative;
 }
 
 .custom-form__field {
@@ -117,10 +142,22 @@
 
   border: none;
   border-bottom: 2px solid #444444;
+
+  outline: none;
+
+  &:hover {
+    border-bottom: 2px solid $primary-color;
+  }
+
+  &:active {
+    border-bottom: 2px solid $primary-color;
+  }
 }
 
 .custom-form__field::placeholder {
   @include placeholder;
+
+  color: #d2d2d2;
 }
 
 .custom-form__field--phone::placeholder {
@@ -129,11 +166,48 @@
 }
 
 .custom-form__field--extra {
+  width: 260px;
   height: 142px;
 
   margin-bottom: 13px;
+  padding-top: 15px;
+  padding-left: 14px;
 
   border: 2px solid #444444;
+
+  &:hover {
+    border: 2px solid $primary-color;
+  }
+
+  &:active {
+    border: 2px solid $primary-color;
+  }
+}
+
+.custom-form__image {
+  position: absolute;
+
+  fill: #cccccc;
+
+  &--phone {
+    top: 33px;
+    right: 8px;
+  }
+
+  &--email {
+    top: 33px;
+    right: 4px;
+  }
+}
+
+.custom-form__field--phone:hover + .custom-form__image--phone,
+.custom-form__field--email:hover + .custom-form__image--email {
+  fill: $primary-color;
+}
+
+.custom-form__field--phone:active + .custom-form__image--phone,
+.custom-form__field--email:active + .custom-form__image--email {
+  fill: $primary-color;
 }
 
 .custom-form__note {
@@ -148,6 +222,73 @@
   line-height: 16px;
 
   cursor: pointer;
+}
+
+.custom-form__radio + .custom-form__style::before {
+  position: absolute;
+  content: "";
+  top: -5px;
+  left: -63px;
+
+  width: 40px;
+  height: 40px;
+
+  border: 2px solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.custom-form__radio:checked + .custom-form__style::after {
+  position: absolute;
+  content: "";
+
+  top: 7px;
+  left: -51px;
+
+  width: 16px;
+  height: 16px;
+
+  background-color: $primary-color;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.custom-form__checkbox + .custom-form__style::before {
+  position: absolute;
+  content: "";
+  top: -7px;
+  left: -63px;
+
+  width: 40px;
+  height: 40px;
+
+  border: 2px solid #000000;
+  cursor: pointer;
+}
+
+.custom-form__checkbox:checked + .custom-form__style::after {
+  position: absolute;
+  content: "";
+  top: 7px;
+  left: -55px;
+
+  width: 40px;
+  height: 40px;
+
+  background: url("../img/icon-tick.svg") 0 0 no-repeat;
+  background-size: 22px 16px;
+
+  cursor: pointer;
+}
+
+.custom-form__radio:hover + .custom-form__style::before,
+.custom-form__checkbox:hover + .custom-form__style::before {
+  border: 2px solid $primary-color;
+}
+
+.custom-form__radio:active + .custom-form__style::before,
+.custom-form__checkbox:active + .custom-form__style::before {
+  border: 2px solid #c7c7c7;
 }
 
 @media (min-width: $tablet-width) {
@@ -198,6 +339,11 @@
     position: absolute;
 
     margin-bottom: 0;
+
+    &::after {
+      width: 0;
+      height: 0;
+    }
   }
 
   .custom-form__list {
@@ -213,8 +359,11 @@
     padding: 0;
   }
 
-  .custom-form__field {
-    @include paragraph($color-paragraph, 19px, 18px);
+  .custom-form__field::placeholder {
+    font-size: 19px;
+    line-height: 18px;
+
+    color: #cecece;
   }
 
   .custom-form__wrapper:nth-child(1) {
@@ -271,6 +420,20 @@
     & .custom-form__list {
       padding-left: 168px;
     }
+
+    & .custom-form__style {
+      margin-right: 20px;
+    }
+
+    & .custom-form__field {
+      min-width: 375px;
+
+      padding-left: 18px;
+    }
+
+    & .custom-form__field--name {
+      min-width: 427px;
+    }
   }
 
   .custom-form__wrapper:nth-child(4) {
@@ -294,6 +457,11 @@
     padding-left: 16px;
   }
 
+  .custom-form__image--phone {
+    top: 12px;
+    right: 27px;
+  }
+
   .custom-form__wrapper:nth-child(5) {
     @include container-tablet;
 
@@ -305,6 +473,11 @@
     background-color: #f1f1f1;
   }
 
+  .custom-form__image--email {
+    top: 12px;
+    right: 23px;
+  }
+
   .custom-form__desc--email {
     top: 17px;
     left: -167px;
@@ -313,6 +486,11 @@
   .custom-form__field--email {
     min-width: 501px;
     padding-left: 16px;
+  }
+
+  .custom-form__field--phone,
+  .custom-form__field--email {
+    background-color: #f1f1f1;
   }
 
   .custom-form__wrapper:nth-child(6) {
@@ -354,6 +532,40 @@
     width: 230px;
 
     margin-left: 50px;
+  }
+
+  .custom-form__radio + .custom-form__style::before {
+    top: -11px;
+    left: -81px;
+
+    width: 52px;
+    height: 52px;
+  }
+
+  .custom-form__radio:checked + .custom-form__style::after {
+    top: 4px;
+    left: -65px;
+
+    width: 21px;
+    height: 21px;
+  }
+
+  .custom-form__checkbox + .custom-form__style::before {
+    top: -11px;
+    left: -81px;
+
+    width: 54px;
+    height: 52px;
+  }
+
+  .custom-form__checkbox:checked + .custom-form__style::after {
+    top: 4px;
+    left: -70px;
+
+    width: 40px;
+    height: 40px;
+
+    background-size: 33px 22px;
   }
 }
 
@@ -456,6 +668,14 @@
     & .custom-form__list {
       padding-left: 176px;
     }
+
+    & .custom-form__field {
+      min-width: 573px;
+    }
+
+    & .custom-form__field--name {
+      min-width: 626px;
+    }
   }
 
   .custom-form__desc--full-name {
@@ -477,6 +697,16 @@
     top: 17px;
   }
 
+  .custom-form__image--phone {
+    top: 10px;
+    right: 183px;
+  }
+
+  .custom-form__field--phone,
+  .custom-form__field--email {
+    min-width: 700px;
+  }
+
   .custom-form__wrapper:nth-child(5) {
     @include container-desktop;
 
@@ -489,6 +719,11 @@
   .custom-form__desc--email {
     left: -114px;
     top: 19px;
+  }
+
+  .custom-form__image--email {
+    top: 10px;
+    right: 179px;
   }
 
   .custom-form__wrapper:nth-child(6) {
