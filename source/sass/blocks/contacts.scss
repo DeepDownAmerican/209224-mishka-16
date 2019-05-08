@@ -1,4 +1,6 @@
 .contacts {
+  position: relative;
+
   display: flex;
   flex-direction: column;
 
@@ -67,7 +69,14 @@
 
 .contacts__map {
   @include container;
+
   padding: 0;
+}
+
+.contacts__map-pin {
+  position: absolute;
+  top: 427px;
+  left: 139px;
 }
 
 .contacts__feedback {
@@ -150,12 +159,18 @@
 
   .contacts__map {
     @include container-tablet;
+
     padding: 0;
   }
 
   .contacts__map-image {
     width: 768px;
     height: 457px;
+  }
+
+  .contacts__map-pin {
+    top: 444px;
+    left: 363px;
   }
 
   .contacts__feedback {
@@ -218,11 +233,16 @@
 
   .contacts__map-image {
     position: absolute;
-    top: 76px;
+    top: 71px;
     right: 50px;
 
     width: 525px;
     height: 457px;
+  }
+
+  .contacts__map-pin {
+    top: 216px;
+    left: 813px;
   }
 
   .contacts__feedback {

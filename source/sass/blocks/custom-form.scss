@@ -296,12 +296,28 @@
     @include container-tablet;
     @include bold-text($bold-text, 43px, 50px);
 
+    position: relative;
+
     min-height: 220px;
 
     padding-top: 17px;
     padding-left: 189px;
     margin-top: -78px;
     margin-bottom: 78px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: -18px;
+      left: 0;
+
+      width: 770px;
+      height: 24px;
+
+      background: url("../img/bg-zigzag-fill.svg") 0 0 no-repeat;
+      background-size: 770px 24px;
+    }
   }
 
   .custom {
@@ -588,6 +604,15 @@
     padding-left: 335px;
     margin-top: -98px;
     margin-bottom: 123px;
+
+    &::after {
+
+      width: 1150px;
+      height: 34px;
+
+      background: url("../img/bg-zigzag-fill.svg") 0 0 no-repeat;
+      background-size: 1150px 34px;
+    }
   }
 
   .custom__text {

@@ -1,10 +1,24 @@
 .goods-week {
   @include container;
+  position: relative;
 
   min-height: 826px;
 
-  background: url("../img/bg-zigzag-line.svg") 0 794px no-repeat;
-  background-size: 319px 6px;
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 25px;
+
+    width: 320px;
+    height: 6px;
+
+    background: url("../img/bg-zigzag-line.svg") 0 0 no-repeat;
+    background-size: 325px auto;
+
+    transform: rotate(180deg);
+  }
 }
 
 .goods-week__subtitle {
@@ -58,6 +72,11 @@
   width: 165px;
 }
 
+.goods-week__image {
+  width: 260px;
+  height: 315px;
+}
+
 .goods-week__price {
   @include bold-text($color-paragraph, 17px, 24px);
 
@@ -85,8 +104,15 @@
     min-height: 627px;
     min-width: 668px;
 
-    background: url("../img/bg-zigzag-line.svg") 0 565px no-repeat;
-    background-size: 772px 17px;
+    &::after {
+      bottom: 45px;
+
+      width: 772px;
+      height: 17px;
+
+      background: url("../img/bg-zigzag-line.svg") 0 0 no-repeat;
+      background-size: 772px 17px;
+    }
   }
 
   .goods-week__header {
@@ -148,7 +174,8 @@
     left: 334px;
     top: 4px;
 
-    width: 333px;
+    width: auto;
+    max-width: 333px;
     height: 404px;
   }
 
@@ -173,8 +200,16 @@
     padding-top: 121px;
     padding-left: 87px;
 
-    background: url("../img/bg-zigzag-line.svg") 51px 780px no-repeat;
-    background-size: 1050px 23px;
+    &::after {
+      bottom: 0;
+      left: 50px;
+
+      width: 1050px;
+      height: 23px;
+
+      background: url("../img/bg-zigzag-line.svg") 0 0 no-repeat;
+      background-size: 1050px 23px;
+    }
   }
 
   .goods-week__header {
@@ -212,7 +247,8 @@
     top: -158px;
     left: 350px;
 
-    width: 525px;
+    width: auto;
+    max-width: 525px;
     height: 636px;
   }
 }

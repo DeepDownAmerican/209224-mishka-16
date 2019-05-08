@@ -138,6 +138,8 @@
     @include bold-text($bold-text, 43px, 50px);
     @include container-tablet;
 
+    position: relative;
+
     min-height: 226px;
 
     padding-top: 18px;
@@ -146,6 +148,20 @@
     margin-top: -79px;
 
     background-color: #f1f1f1;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+
+      width: 770px;
+      height: 24px;
+
+      background: url("../img/bg-zigzag-fill.svg") 0 0 no-repeat;
+      background-size: 770px 24px;
+    }
   }
 
   .catalog__text {
@@ -251,6 +267,16 @@
     margin-top: -97px;
 
     background-color: #f1f1f1;
+
+    &::after {
+      bottom: -18px;
+
+      width: 1150px;
+      height: 34px;
+
+      background: url("../img/bg-zigzag-fill.svg") 0 0 no-repeat;
+      background-size: 1150px 34px;
+    }
   }
 
   .catalog__item-image {
