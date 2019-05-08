@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Мишка</title>
   <link href="css/style.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 
 <body>
@@ -215,23 +214,26 @@
   </footer>
 
   <section class="popup">
-    <h2 class="popup__title">Добавить в корзину</h2>
-    <p class="popup__text">Выберите размер:</p>
-    <ul class="popup__size-list">
-      <li>
-        <button class="popup__size-item popup__size-item--active" type="button">S</button>
-      </li>
-      <li>
-        <button class="popup__size-item" type="button">M</button>
-      </li>
-      <li>
-        <button class="popup__size-item" type="button">L</button>
-      </li>
-    </ul>
-    <button class="popup__add-cart button" type="submit">Добавить</button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Добавить в корзину</h2>
+      <p class="popup__text">Выберите размер:</p>
+      <ul class="popup__size-list">
+        <li class="popup__size-item">
+          <button class="popup__size-button popup__size-button--active" type="button">S</button>
+        </li>
+        <li class="popup__size-item">
+          <button class="popup__size-button" type="button">M</button>
+        </li>
+        <li class="popup__size-item">
+          <button class="popup__size-button" type="button">L</button>
+        </li>
+      </ul>
+      <button class="popup__add-cart button" type="submit">Добавить</button>
+    </div>
   </section>
 
   <script src="js/script.js"></script>
+  <script src="js/picturefill.min.js" async></script>
 </body>
 
 </html>
