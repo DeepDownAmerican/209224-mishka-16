@@ -67,6 +67,12 @@
   }
 }
 
+.contacts__map-interactive {
+  position: absolute;
+
+  z-index: 1;
+}
+
 .contacts__map {
   @include container;
 
@@ -163,6 +169,11 @@
     padding: 0;
   }
 
+  .contacts__map-interactive {
+    width: 768px;
+    height: 457px;
+  }
+
   .contacts__map-image {
     width: 768px;
     height: 457px;
@@ -229,6 +240,14 @@
 
   .contacts__address--email {
     margin-left: 24px;
+  }
+
+  .contacts__map-interactive {
+    top: 71px;
+    right: 50px;
+
+    width: 525px;
+    height: 457px;
   }
 
   .contacts__map-image {
