@@ -1,4 +1,4 @@
-.page-footer__copyright {
+.copyright {
   @include bold-text($bold-text, 19px, 18px);
 
   min-height: 80px;
@@ -9,17 +9,17 @@
   border-top: 1px solid #e5e5e5;
 }
 
-.page-footer__copyright:active {
+.copyright:active {
   opacity: 0.3;
 }
 
-.page-footer__copyright-icon {
+.copyright__icon {
   position: relative;
 
   font-size: 0;
 }
 
-.page-footer__copyright-image {
+.copyright__image {
   position: absolute;
   bottom: -11px;
   left: 25px;
@@ -32,21 +32,43 @@
 }
 
 @media (min-width: $tablet-width) {
-  .page-footer__copyright {
+  .copyright {
     padding-right: 56px;
 
     border-top: 0;
   }
 
-  .page-footer__copyright-image {
+  .copyright__image {
     bottom: 4px;
     left: 156px;
+  }
+
+  @-moz-document url-prefix() {
+    .copyright {
+      padding-right: 51px;
+    }
+
+    .copyright__image {
+      bottom: -14px;
+      left: 24px;
+    }
+  }
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .copyright {
+      padding-right: 51px;
+    }
+
+    .copyright__image {
+      bottom: -14px;
+      left: 24px;
+    }
   }
 }
 
 
 @media (min-width: $desktop-width) {
-  .page-footer__copyright {
+  .copyright {
     padding-top: 12px;
   }
 }

@@ -1,3 +1,7 @@
+.navigation__wrapper {
+  @include container;
+}
+
 .navigation__toggle {
   position: absolute;
   top: 22px;
@@ -123,6 +127,14 @@
   }
 
   .navigation__list--open .navigation__item:not(:nth-child(n+6)) {
+    display: block;
+  }
+
+  .navigation__list--nojs .navigation__toggle {
+    display: none;
+  }
+
+  .navigation__list--nojs .navigation__item:not(:nth-child(n+6)) {
     display: block;
   }
 }

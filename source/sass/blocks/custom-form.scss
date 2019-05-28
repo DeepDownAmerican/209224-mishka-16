@@ -1,21 +1,3 @@
-.custom__title {
-  @include container;
-  @include bold-text($bold-text, 27px, 30px);
-
-  min-height: 177px;
-
-  padding-top: 71px;
-  padding-left: 36px;
-  margin-top: 0;
-  margin-bottom: 22px;
-
-  background-color: #f1f1f1;
-}
-
-.custom__text {
-  display: none;
-}
-
 .custom {
   @include container;
 
@@ -297,52 +279,12 @@
 }
 
 @media (min-width: $tablet-width) {
-  .custom__title {
-    @include container-tablet;
-    @include bold-text($bold-text, 43px, 50px);
-
-    position: relative;
-
-    min-height: 220px;
-
-    padding-top: 17px;
-    padding-left: 189px;
-    margin-top: -78px;
-    margin-bottom: 78px;
-
-    &::after {
-      content: "";
-
-      position: absolute;
-      bottom: -18px;
-      left: 0;
-
-      width: 770px;
-      height: 24px;
-
-      background: url("../img/bg-zigzag-fill.svg") 0 0 no-repeat;
-      background-size: 770px 24px;
-    }
-  }
-
   .custom {
     @include container-tablet;
 
     min-height: 1477px;
 
     padding: 0;
-  }
-
-  .custom__text {
-    @include paragraph($color-paragraph, 15px, 24px);
-
-    display: block;
-
-    padding-left: 298px;
-    margin-top: 0;
-    margin-bottom: 53px;
-
-    font-weight: normal;
   }
 
   .custom__info {
@@ -597,32 +539,6 @@
     min-height: 1397px;
 
     padding: 0;
-  }
-
-  .custom__title {
-    @include bold-text($bold-text, 53px, 57px);
-    @include container-desktop;
-
-    min-height: 253px;
-
-    padding-top: 18px;
-    padding-left: 335px;
-    margin-top: -98px;
-    margin-bottom: 123px;
-
-    &::after {
-
-      width: 1150px;
-      height: 34px;
-
-      background: url("../img/bg-zigzag-fill.svg") 0 0 no-repeat;
-      background-size: 1150px 34px;
-    }
-  }
-
-  .custom__text {
-    padding-left: 533px;
-    margin-bottom: 52px;
   }
 
   .custom__info {

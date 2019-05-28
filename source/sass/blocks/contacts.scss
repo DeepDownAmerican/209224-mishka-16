@@ -43,7 +43,7 @@
   margin-left: 31px;
 }
 
-.contacts__address--email {
+.contacts--email {
   position: relative;
 
   margin-left: 31px;
@@ -69,6 +69,8 @@
 
 .contacts__map-interactive {
   position: absolute;
+
+  border: 0;
 
   z-index: 1;
 }
@@ -148,7 +150,7 @@
     min-width: 334px;
   }
 
-  .contacts__address--email {
+  .contacts--email {
     margin-left: 22px;
 
     &::after {
@@ -238,7 +240,7 @@
     padding-left: 4px;
   }
 
-  .contacts__address--email {
+  .contacts--email {
     margin-left: 24px;
   }
 

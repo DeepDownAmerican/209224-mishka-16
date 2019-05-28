@@ -53,10 +53,6 @@
 .preview__item {
   min-height: 103px;
 
-  &:hover {
-    min-height: 108px;
-  }
-
   &:active .preview__link-text,
   &:active .preview__link-image {
     opacity: 0.3;
@@ -107,6 +103,12 @@
 
 .preview__link-image {
   fill: #35a999;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .preview__list {
+    margin-top: 120px;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -177,10 +179,6 @@
   .preview__item {
     min-height: 117px;
     width: 334px;
-
-    &:hover {
-      min-height: 122px;
-    }
   }
 
   .preview__link {
@@ -197,6 +195,17 @@
 
   .preview__link-text {
     @include bold-text($bold-text, 20px, 30px);
+  }
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .preview__title {
+      margin-top: 112px;
+      margin-left: 49px;
+    }
+
+    .preview__list {
+      margin-top: 375px;
+    }
   }
 }
 
@@ -245,7 +254,41 @@
       width: 1250px;
       height: 100%;
 
+      background: url("../img/bg-zigzag-fill.svg") 0 0 no-repeat;
       background-size: 1250px 100%;
+    }
+  }
+
+  @-moz-document url-prefix() {
+    .preview__list::after {
+      top: 99px;
+
+      width: 1250px;
+      height: 34px;
+
+      background: url("../img/bg-zigzag-fill.svg") 0 0 no-repeat;
+      background-size: 1250px 34px;
+    }
+  }
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .preview__title {
+      margin-top: 93px;
+      margin-left: 180px;
+    }
+
+    .preview__list {
+      margin-top: 363px;
+
+      &::after {
+        top: 99px;
+
+        width: 1250px;
+        height: 34px;
+
+        background: url("../img/bg-zigzag-fill.svg") 0 0 no-repeat;
+        background-size: 1250px 34px;
+      }
     }
   }
 
