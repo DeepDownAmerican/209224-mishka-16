@@ -37,11 +37,11 @@
   }
 
   &:nth-child(4) {
-    margin-bottom: 34px;
+    margin-bottom: 32px;
   }
 
   &:nth-child(5) {
-    margin-bottom: 32px;
+    margin-bottom: 33px;
   }
 }
 
@@ -83,7 +83,7 @@
   content: "";
 
   position: absolute;
-  top: 8px;
+  top: 10px;
   left: 62px;
 
   width: 198px;
@@ -142,15 +142,24 @@
   color: #d2d2d2;
 }
 
+.custom-form__field--phone {
+  margin-top: 4px;
+}
+
 .custom-form__field--phone::placeholder {
   font-size: 19px;
   line-height: 18px;
+}
+
+.custom-form__field--email {
+  margin-top: 5px;
 }
 
 .custom-form__field--extra {
   width: 260px;
   height: 142px;
 
+  margin-top: 23px;
   margin-bottom: 13px;
   padding-top: 15px;
   padding-left: 14px;
@@ -399,6 +408,10 @@
     }
   }
 
+  .custom-form__wrapper:nth-child(3) .custom-form__item {
+    margin-bottom: 25px;
+  }
+
   .custom-form__wrapper:nth-child(4) {
     @include container-tablet;
 
@@ -411,18 +424,19 @@
   }
 
   .custom-form__desc--phone {
-    top: 17px;
-    left: -167px;
+    top: 69px;
+    left: 52px;
   }
 
   .custom-form__field--phone {
     min-width: 501px;
     padding-left: 16px;
+    margin-top: 2px;
   }
 
   .custom-form__image--phone {
-    top: 12px;
-    right: 27px;
+    top: 62px;
+    right: 76px;
   }
 
   .custom-form__wrapper:nth-child(5) {
@@ -437,18 +451,19 @@
   }
 
   .custom-form__image--email {
-    top: 12px;
-    right: 23px;
+    top: 24px;
+    right: 73px;
   }
 
   .custom-form__desc--email {
-    top: 17px;
-    left: -167px;
+    top: 31px;
+    left: 51px;
   }
 
   .custom-form__field--email {
     min-width: 501px;
     padding-left: 16px;
+    margin-top: 1px;
   }
 
   .custom-form__field--phone,
@@ -466,15 +481,16 @@
   }
 
   .custom-form__desc--extra {
-    top: 17px;
-    left: -167px;
+    top: 68px;
+    left: 51px;
   }
 
   .custom-form__field--extra {
     width: 501px;
     height: 142px;
 
-    margin-bottom: 50px;
+    margin-top: 0;
+    margin-bottom: 51px;
   }
 
   .custom-form__wrapper:nth-child(7) {
@@ -639,13 +655,13 @@
   }
 
   .custom-form__desc--phone {
-    left: -113px;
-    top: 17px;
+    left: 112px;
+    top: 67px;
   }
 
   .custom-form__image--phone {
-    top: 10px;
-    right: 183px;
+    top: 61px;
+    right: 232px;
   }
 
   .custom-form__field--phone,
@@ -663,13 +679,13 @@
   }
 
   .custom-form__desc--email {
-    left: -114px;
-    top: 19px;
+    left: 112px;
+    top: 31px;
   }
 
   .custom-form__image--email {
-    top: 10px;
-    right: 179px;
+    top: 22px;
+    right: 229px;
   }
 
   .custom-form__wrapper:nth-child(6) {
@@ -682,8 +698,8 @@
   }
 
   .custom-form__desc--extra {
-    left: -113px;
-    top: 18px;
+    left: 113px;
+    top: 67px;
   }
 
   .custom-form__field--extra {
