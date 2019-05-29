@@ -21,12 +21,12 @@
   @include bold-text($bold-text, 17px, 20px);
 }
 
-.about-us__item-text--clear {
+.about-us--clear {
   margin-top: 13px;
   margin-bottom: 29px;
 }
 
-.about-us__item-text--price {
+.about-us--price {
   margin-top: 22px;
   margin-bottom: 35px;
 }
@@ -35,17 +35,17 @@
   margin-left: 0;
 }
 
-.about-us__item-text--like {
+.about-us--like {
   margin-top: 19px;
   margin-bottom: 28px;
 }
 
-.about-us__item-text--hands {
+.about-us--hands {
   margin-top: 14px;
   margin-bottom: 33px;
 }
 
-.about-us__item-text--support {
+.about-us--support {
   margin-top: 23px;
   margin-bottom: 30px;
 }
@@ -199,9 +199,9 @@
     }
   }
 
-  .about-us__item-text--clear,
-  .about-us__item-text--price,
-  .about-us__item-text--like {
+  .about-us--clear,
+  .about-us--price,
+  .about-us--like {
     padding-left: 2px;
   }
 }

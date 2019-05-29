@@ -77,6 +77,12 @@
   height: 315px;
 }
 
+.features__item:-moz-any-link,
+.features__value:-moz-any-link {
+  padding-top: 7px;
+  padding-bottom: 9px;
+}
+
 .goods-week__price {
   @include bold-text($color-paragraph, 17px, 24px);
 
@@ -167,6 +173,10 @@
 
   .features__item {
     width: 77px;
+  }
+
+  .features__value {
+    padding-left: 15px;
   }
 
   .goods-week__image {

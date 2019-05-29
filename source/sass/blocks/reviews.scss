@@ -104,8 +104,7 @@
     background-size: 350px 457px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: url("../img/review@2x.jpg") 0 0 no-repeat;
-      background-size: 350px 457px;
+      background-image: url("../img/review@2x.jpg");
     }
 
     &::after {
@@ -174,6 +173,14 @@
 
     border: none;
   }
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .reviews__item {
+      width: 642px;
+
+      margin-top: 133px;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -233,5 +240,11 @@
   .reviews__write {
     margin-left: 478px;
     margin-top: 9px;
+  }
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .reviews__item {
+      margin-top: 168px;
+    }
   }
 }
