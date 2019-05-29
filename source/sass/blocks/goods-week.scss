@@ -77,12 +77,10 @@
   height: 315px;
 }
 
-@-moz-document url-prefix() {
-  .features__item,
-  .features__value {
-    padding-top: 7px;
-    padding-bottom: 9px;
-  }
+.features__item:-moz-any-link,
+.features__value:-moz-any-link {
+  padding-top: 7px;
+  padding-bottom: 9px;
 }
 
 .goods-week__price {

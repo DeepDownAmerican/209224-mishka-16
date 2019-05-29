@@ -43,15 +43,13 @@
     left: 156px;
   }
 
-  @-moz-document url-prefix() {
-    .copyright {
-      padding-right: 51px;
-    }
+  .copyright:-moz-any-link {
+    padding-right: 51px;
+  }
 
-    .copyright__image {
-      bottom: -14px;
-      left: 24px;
-    }
+  .copyright__image:-moz-any-link {
+    bottom: -14px;
+    left: 24px;
   }
 
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -65,7 +63,6 @@
     }
   }
 }
-
 
 @media (min-width: $desktop-width) {
   .copyright {

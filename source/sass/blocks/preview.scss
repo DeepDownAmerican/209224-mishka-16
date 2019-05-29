@@ -259,16 +259,14 @@
     }
   }
 
-  @-moz-document url-prefix() {
-    .preview__list::after {
-      top: 99px;
+  .preview__list::after:-moz-any-link {
+    top: 99px;
 
-      width: 1250px;
-      height: 34px;
+    width: 1250px;
+    height: 34px;
 
-      background: url("../img/bg-zigzag-fill.svg") 0 0 no-repeat;
-      background-size: 1250px 34px;
-    }
+    background: url("../img/bg-zigzag-fill.svg") 0 0 no-repeat;
+    background-size: 1250px 34px;
   }
 
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
