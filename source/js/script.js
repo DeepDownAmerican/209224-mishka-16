@@ -12,3 +12,4 @@
       navMain.classList.remove('navigation__list--open');
     }
   });
+
