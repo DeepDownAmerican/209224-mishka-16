@@ -99,6 +99,14 @@
   line-height: 20px;
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .contacts--email::after {
+    position: absolute;
+    top: 30px;
+    left: 0;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .contacts {
     flex-wrap: wrap;
