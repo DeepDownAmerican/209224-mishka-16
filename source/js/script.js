@@ -13,17 +13,3 @@
     }
   });
 
-  // FIXME: не работает
-  // var link = document.querySelector(".catalog__item-buy");
-  // var popup = document.querySelector(".popup");
-  // var close = popup.querySelector(".popup__add-cart");
-
-  // link.addEventListener("click", function (evt) {
-  //   evt.preventDefault();
-  //   popup.classList.add("popup-show");
-  // });
-
-  // close.addEventListener("click", function (evt) {
-  //   evt.preventDefault();
-  //   popup.classList.remove("popup-show");
-  // });

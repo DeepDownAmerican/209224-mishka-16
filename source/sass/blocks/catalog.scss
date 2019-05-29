@@ -100,8 +100,12 @@
   width: 20px;
   height: 19px;
 
+  fill: #444444;
+  opacity: 0.2;
+
   &:hover {
     fill: $primary-color;
+    opacity: 1;
   }
 
   &:active {
